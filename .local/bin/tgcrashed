@@ -1,0 +1,24 @@
+#!/bin/bash
+
+TDATA=$HOME/.local/share/TelegramDesktop/
+TBACKUP=$HOME/.local/share/TelegramDesktopBackup/
+
+if [ `pgrep telegram` ]
+then
+ echo "Close your TelegramDesktop client and try again."
+ exit 1
+fi
+
+if [ -e $BACKUP ]
+then
+ echo "Backup directory found."
+ if [ -e $TDATA ]
+ then
+  echo "Removing "$TDATA
+  rm -r $TDATA || exit 1
+ fi
+ echo "Copying "$TBACKUP" to "$TDATA
+ cp -r $TBACKUP $TDATA && echo "Success!"
+else
+ echo "Where is your backup?"
+fi
