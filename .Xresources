@@ -1,0 +1,127 @@
+! font settings --------------------------------------------------------------
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! xscreensaver ---------------------------------------------------------------
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-fixed-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #101010
+xscreensaver.Dialog.background:         #D8D8D8
+xscreensaver.Dialog.topShadowColor:     #D8D8D8
+xscreensaver.Dialog.bottomShadowColor:  #D8D8D8
+xscreensaver.Dialog.Button.foreground:  #101010
+xscreensaver.Dialog.Button.background:  #E5E5E5
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #101010
+xscreensaver.Dialog.text.background:    #E5E5E5
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        0
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #101010
+xscreensaver.passwd.thermometer.background:  #2E2E2E
+xscreensaver.passwd.thermometer.width:       8
+
+! urxvt -------------------------------------------
+
+URxvt.font: xft:Monospace:size=11
+URxvt.boldFont: xft:Monospace:Bold:size=11
+URxvt.letterSpace: -2
+! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
+
+! Window size and position
+!URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 80x28
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+URxvt.iconFile: /usr/share/icons/Faenza-Bunsen-common/apps/48/utilities-terminal.png
+!URxvt.scrollColor: #453452
+!URxvt.scrollColor: #27492E
+URxvt.scrollColor: #30223D
+URxvt*scrollTtyOutput: true
+URxvt*scrollWithBuffer: false
+URxvt*scrollTtyKeypress: true
+
+! Scrollback buffer lines - 65535 is max (64 is default)
+!URxvt.saveLines:65535
+URxvt.saveLines:65534
+
+! Transparency
+!URxvt.transparent: true
+!URxvt.shading: 40
+! True Transparency, opacity percentage set in square brackets before URxvt.background colour
+URxvt.depth:32
+
+! Clickable URLs
+URxvt.perl-lib: /home/user/.config/urxvt/extensions/
+!URxvt.perl-ext-common: default,matcher,resize-font,clipboard
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.keysym.Mod4-c: perl:clipboard:copy 
+URxvt.keysym.Mod4-v: perl:clipboard:paste
+
+!URxvt.resize-font.smaller: C-Down 
+!URxvt.resize-font.bigger: C-Up
+
+URxvt.dynamicColors: on
+
+!!*background: #1B1424
+!!*background: rgba:49/37/66/cccc
+*background: [90]#1B1424
+*foreground: #cccccc
+*fading: 20
+*fadeColor: #1B1424
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3
