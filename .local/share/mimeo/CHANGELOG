@@ -1,0 +1,76 @@
+# 2017-02-09
+* Parse MIME-type from filepaths when managing associations.
+* Parse qualified MIME-types (tree, suffix, parameters) and default to unqualified associations if no qualified associations are found.
+
+# 2016-01-25
+* Fixed bug with double commands with custom associations.
+* Fixed localhost URL resolution.
+* Fixed bug that let to empty output with `--desk2field` when omitting ".desktop" extensions.
+* Add more debugging messages for reading and writing files.
+
+# 2016-01-21
+* Catch permission errors.
+
+# 2016-01-20
+* Ensure a single command per argument.
+* Remove sorting of some informational output to ensure that the displayed order corresponds to the programmatic order, e.g. list MIME-types in the order that they are used to determine a matching desktop entry.
+* Add `--show-all` option to print multiple commands for each argument.
+* Fixed problem with ordering of multiple defaults.
+* Display only one result per argument for most queries when not using `--show-all`.
+* Percent-decode paths in file URLs when invoking commands.
+* Better handling and passing of common function parameters.
+* Renamed `--fullpath` to `--full-path`.
+* Removed `--field2desk`. Use `--desk2field` with `--swap` instead.
+
+# 2016-01-18
+* Added `--filepath-help`.
+* Fix handling of iterators in `modify_associations`.
+* Omit isolated "%f" and "%u" when interpolating commands with no arguments to avoid empty arguments in returned command.
+
+
+# 2016-01-15
+* Refactored code to reduce duplication and heterogeneity.
+* Added multiple options for querying information (`--desk2field`, `--field2desk`, `--fullpath`).
+
+# 2016-01-14
+* Fixed command bug from previous update.
+* Added default arguments file support.
+* Formatted desktop command-line arguments to avoid extra typing when the intention is unequivocal. The desktop extension may be omitted, and full paths may be passed.
+* Updated Mimeman help message.
+* Added `--finddesk` option to query paths to desktop files.
+
+# 2016-01-13
+* Added fallback switching between content and name detection for paths.
+* Minor conversions to generalize functions.
+* Allowed MIME-type matchers as arguments with --mimetype.
+* Fixed bug in configuration file detection.
+* Added `--desk2mime` and `--mime2desk`.
+
+
+# 2016-01-13
+* Completely rewritten in Python 3.
+* Updated to conform to the latest versions of the standards on freedesktop.org[^see `Mimeo.py` for details]. The latest version has deprecated `$XDG_DATA_DIR/applications` (`~/.local/share/applications`) and all files in it. Use the `--deprecated` flag to continue to use these, including custom desktop files created by Mimeo.
+* Several new options.
+* Dropped support for `--purge` option.
+* Redundant informational output formats have been simplified. Lines previously containing `foo.desktop /path/to/foo.desktop` now only contain `/path/to/foo.desktop`.
+
+# 2015-06-23
+* Added "--by-content" option.
+
+# 2015-01-15
+* Import defaults from `defaults.list` to `mimeapps.list` when updating `mimeapps.list`.
+
+# 2011-04-25
+* Added "--quiet" option to suppress output when running applications.
+
+
+# 2011-03-12
+* Loading of desktop files in subdirectories & further standard-compliance.
+* URI handling via "x-scheme-handle/*" MIME-types.
+* Special handling of 'file' URIs.
+* New output format for some operations.
+
+# 2011-02-22
+Mimeo subsumed Mimeman's functionality, with needed corrections. Mimeman was a dirty kludge created without any knowledge of the standard. Mimeo is now able to manage MIME-type associations and create desktop files.
+
+Mimeo's algorithm for determing associations has also been corrected in several places.
