@@ -1,0 +1,25 @@
+[Added Associations]
+image/gif=eog.desktop
+image/jpeg=eog.desktop
+image/png=eog.desktop
+image/svg+xml=eog.desktop
+text/plain=sublime_text.desktop
+text/html=sublime.desktop
+application/xml=sublime.desktop
+application/javascript=sublime.desktop
+x-directory/normal=thunar.desktop
+x-directory/gnome-default-handler=thunar.desktop
+inode/directory=thunar.desktop
+audio/mpeg=mpv.desktop
+audio/mp4=mpv.desktop
+audio/x-wav=mpv.desktop
+audio/aac=mpv.desktop
+video/webm=mpv.desktop
+video/x-ms-asf=mpv.desktop
+video/x-theora+ogg=mpv.desktop
+application/x-deb=gdebi.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/http=torbrowser.desktop
+x-scheme-handler/https=torbrowser.desktop
+
+
